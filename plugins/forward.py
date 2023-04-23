@@ -59,7 +59,7 @@ import os
 
 
 @bot.on_message(
-    filters.chat(AUTH_USERS) & filters.private &
+    filters.chat(AUTH_USERS))
     filters.incoming & filters.command("forward", prefixes=prefixes)
 )
 async def forward(bot: Client , m: Message):
